@@ -18,7 +18,11 @@ We track an object using measurements from LiDAR and Radar using measurement mod
 Navigate to the ```build``` folder
 
 ```$ mkdir build```
+
 ```$ cd build```
+
 ```$ cmake ..```
+
 ```$ make ```
+
 ```$ ./main ``` 
