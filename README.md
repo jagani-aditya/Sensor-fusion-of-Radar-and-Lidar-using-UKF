@@ -11,17 +11,14 @@ We track an object using measurements from LiDAR and Radar using measurement mod
 </p>
 
 ## Platform
-* Ubuntu 18.04 LTS
-* ROS Melodic
-* Gazebo 
-* RViz
+* C++
 
 ## Implementation
  
-Navigate to the ROS package in the ```catkin_ws``` folder
+Navigate to the ```build``` folder
 
-```$ catkin_make```
-
-```$ source devel/setup.bash ```
-
-``` roslaunch explore_env turtlebot_gazebo.launch ``` 
+```$ mkdir build```
+```$ cd build```
+```$ cmake ..```
+```$ make ```
+```$ ./main ``` 
