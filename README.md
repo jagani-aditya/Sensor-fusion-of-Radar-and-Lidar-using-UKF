@@ -18,34 +18,6 @@ functions, insteadly, the unscented Kalman filter takes representative points fr
 
 
 
-## Unscented Kalman Filter VS Extended Kalman Filter
-
-Table 1: Accuracy comparison in RMSE by using EKF and UKF with both lidar and radar measurements. The lidar and radar 
-measurements are included in the txt file under the [data](data) folder. 
-
-|            state        |  UKF          |    EKF     |
-|:-----------------------:|:-------------:|:----------:|
-|            px           | **0.0640299** |  0.0972256 |
-|            py           | **0.0832734** |  0.0853761 |
-|            vx           | **0.330315**  |  0.450855  |
-|            vy           | **0.212456**  |  0.450855  |
-
-
-Table 2: Accuracy comparison in RMSE by UKF with different sensor measurements. 
-
-|           state         | lidar and radar | only lidar | only radar|
-|:-----------------------:|:---------------:|:----------:|:---------:|
-|            px           | **0.0640299**   |  0.168267  |  0.203744 |
-|            py           | **0.0832734**   |  0.146901  |  0.250427 |
-|            vx           | **0.330315**    |  0.613026  |  0.450143 |
-|            vy           | **0.212456**    |  0.252216  |  0.249284 |
-
-
-
-**Conclusions from aboves**:
-
-* From Table 1, we can see the UKF outperform EKF in estimation of all states.
-* From Table 2, we can see that ultizing both lidar and radar measurements improves the tracking results.
 
 ### Motion Model: CTRV model
 ![][image1] 
@@ -100,19 +72,6 @@ and if you are viewing it in "github.io" you can be redirected by clicking the *
    * On windows, you may need to run: `cmake .. -G "Unix Makefiles" && make`
 4. Run it by the following commands: 
    * `./ExtendedKF  ../data/obj_pose-laser-radar-synthetic-input.txt ./output.txt`
-
-
-
-### 5. Release History
-
-* 0.1.1
-    * First proper release
-    * Update documentation
-    * Date 25 May 2017
-
-* 0.1.0
-    * Initiate the repo
-    * Date 22 May 2017
 
 
 
